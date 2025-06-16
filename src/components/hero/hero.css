@@ -1,0 +1,73 @@
+.hero {
+    background-image: url('../../assets/img/hero_bg1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__content {
+    display: block;
+    padding: 150px;
+    height: 700px;
+    position: relative;
+    z-index: 2; /* Контент выше фона, но ниже .animated-background */
+}
+
+.hero__title {
+    font-family: "Oxanium", sans-serif;
+    font-size: 4rem;
+    color: #FFFFFF;
+}
+
+.hero__abstr {
+    color: #909090;
+    font-size: 1.5rem;
+    margin: 10px 0 65px;
+    width: 50%;
+}
+
+
+.animated-background {
+    position: absolute;
+    z-index: 1;
+    width: 500px;
+    height: 100%;
+    background-image: url('../../assets/img/hero_bg2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+    right: -500px;
+    top: 0;
+    animation: slideInFromRight 1s ease-out forwards;
+    will-change: transform; /* Оптимизация анимации */
+}
+
+
+.animated-from-left {
+    transform: translateX(-100%);
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-900px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

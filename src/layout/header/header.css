@@ -1,0 +1,24 @@
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 24px 0;
+}
+
+.nav__list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav__item {
+    color: #c1c1ca;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color .1s;
+}
+
+.nav__item:hover, .nav__item:active {
+    color: #FF2332;
+}
