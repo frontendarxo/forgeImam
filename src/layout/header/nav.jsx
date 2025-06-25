@@ -7,7 +7,7 @@ export function Nav() {
         <nav className="nav">
             <Logo />
             <ul className="nav__list">
-                <li className="nav__item"><a href="#">Обо мне</a></li>
+                <li className="nav__item"><a href="#about">Обо мне</a></li>
                 <li className="nav__item"><a href="#">Услуги</a></li>
                 <li className="nav__item"><a href="#">Отзывы клиентов</a></li>
                 <li className="nav__item"><a href="#">Контакты</a></li>

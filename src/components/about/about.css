@@ -1,0 +1,93 @@
+.about {
+    display: flex;
+    margin: 50px 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about__text, .about__media {
+    max-width: 650px;
+}
+
+.about__title {
+    font-family: 'Oxanium', sans-serif;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 3.5rem;
+}
+
+.about__paragr {
+    color: #909090;
+    font-size: 1.5rem;
+}
+
+.about__progresses {
+    display: flex;
+    gap: 1rem;
+    margin-top: 30px;
+}
+
+.about__progress {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #1F1F1F;
+    border-radius: 1rem;
+    align-items: center;
+    color: #909090;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.about__progress strong {
+    color: #FF2332;
+    font-size: 3.1rem;
+    font-family: 'Anton', sans-serif;
+    font-weight: 800;
+}
+
+.about figcaption {
+    cursor: pointer;
+}
+.about figcaption img {
+    border-radius: 10px;
+}
+
+.about figure {
+    color: #FFFFFF;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+
+
+.about__after {
+    animation: comeFromUp 1s ease-out forwards;
+    will-change: transform;
+}
+
+.about__before {
+    animation: comeFromBottom 1s ease-out forwards;
+    will-change: transform;
+}
+
+
+@keyframes comeFromUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes comeFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

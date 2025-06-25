@@ -1,9 +1,10 @@
+import { About } from "../../components/about/about";
 
 
 export function Main() {
     return (
         <main className="main">
-            <section className="about"></section>
+            <About />
             <section className="service"></section>
             <section className="clients"></section>
             <section className="contacts"></section>

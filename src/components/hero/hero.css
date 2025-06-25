@@ -5,14 +5,23 @@
     background-position: center;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.hero .btn_start {
+    padding: 27px 40px;
 }
 
 .hero__content {
     display: block;
-    padding: 150px;
-    height: 700px;
+    padding: 50px 0;
+    max-width: 1300px;
     position: relative;
-    z-index: 2; /* Контент выше фона, но ниже .animated-background */
+    display: flex;
+    align-items: center;
+    z-index: 200;
 }
 
 .hero__title {
@@ -29,16 +38,34 @@
 }
 
 
+/* ----- Animations ----- */ 
+
+.bg-text::after {
+    position: absolute;
+    content: 'IMAMVU';
+    font-weight: bolder;
+    color: #9090907e;
+    font-size: 10rem;
+    bottom: -30px;
+    left: -25px;
+    opacity: 0;
+    animation: slideInFromButton 1s ease-out forwards;
+    will-change: transform; /* Оптимизация анимации */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%, black 100%);
+    mask-image: linear-gradient(to bottom, transparent 15%, black 100%, black 100%);
+}
+
 .animated-background {
     position: absolute;
-    z-index: 1;
-    width: 500px;
-    height: 100%;
+    z-index: 100;
+    display: block;
+    width: 100vw;
+    height: 100vh;
     background-image: url('../../assets/img/hero_bg2.png');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: right bottom;
-    right: -500px;
+    background-position: right;
+    right: -820px;
     top: 0;
     animation: slideInFromRight 1s ease-out forwards;
     will-change: transform; /* Оптимизация анимации */
@@ -68,6 +95,17 @@
     }
     100% {
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromButton {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
         opacity: 1;
     }
 }
