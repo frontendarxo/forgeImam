@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
+
 const LazyImage= ({ src, alt = '', className }) => {
   const imgRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);

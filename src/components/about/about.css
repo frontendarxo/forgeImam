@@ -50,6 +50,7 @@
 }
 .about figcaption img {
     border-radius: 10px;
+    max-width: 100%;
 }
 
 .about figure {
@@ -60,34 +61,84 @@
 
 
 .about__after {
-    animation: comeFromUp 1s ease-out forwards;
+    animation: comeFromLeft 1s ease-out forwards;
     will-change: transform;
 }
 
 .about__before {
-    animation: comeFromBottom 1s ease-out forwards;
+    animation: comeFromRight 1s ease-out forwards;
     will-change: transform;
 }
 
 
-@keyframes comeFromUp {
+@keyframes comeFromRight {
     0% {
         opacity: 0;
-        transform: translateY(-150px);
+        transform: translateX(-150px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
-@keyframes comeFromBottom {
+@keyframes comeFromLeft {
     0% {
         opacity: 0;
-        transform: translateY(150px);
+        transform: translateX(150px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
+    }
+}
+
+
+@media screen and (max-width: 1330px) {
+    .about {
+        flex-direction: column-reverse;
+        gap: 30px;
+        justify-content: center;
+        text-align: center;
+    }
+    .about__progresses {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about__text {
+        padding: 0 16px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .about {
+        gap: 20px;
+    }
+    .about__progresses {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .about__title {
+        font-size: 2rem;
+    }
+
+    .about__paragr {
+        font-size: 1rem;
+    }
+
+    .about__progress {
+        padding: 10px;
+        width: 90%;
+    }
+
+    .about__progress strong {
+        font-size: 2rem;
+    }
+
+    .about figcaption img {
+        max-width: 90%;
     }
 }

@@ -1,11 +1,12 @@
 import { Button } from '../button/startButton';
 import './hero.css';
+import heroIMG from '../../assets/img/hero_bg2.png'
 
 export function Hero() {
     return (
         <div className="hero">
             <div className="hero__content">
-                <div className="animated-background"></div>
+                <img src={heroIMG} alt='Imam IMG' className='animated-background'/>
                 <div className="hero__text">
                     <h1 className="hero__title animated-from-left">
                         Imam - Personal trainer

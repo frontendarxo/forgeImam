@@ -6,3 +6,17 @@
     color: #FFFFFF;
     cursor: pointer;
 }
+
+@media screen and (max-width: 1330px) {
+
+    #logo {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    #logo {
+        font-size: 1rem;
+    }
+}

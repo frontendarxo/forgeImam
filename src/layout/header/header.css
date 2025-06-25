@@ -19,6 +19,41 @@
     transition: color .1s;
 }
 
+.nav__toggle {
+    font-size: 1.5rem;
+    background: #FFFFFF;
+    border-radius: 50% 50% 50% 50%;
+    margin-right: 16px;
+    padding: 10px;
+    border: #FF2332;
+    color: #FF2332;
+    display: none; /* скрыт по умолчанию */
+}
+
 .nav__item:hover, .nav__item:active {
     color: #FF2332;
+}
+
+
+@media screen and (max-width: 1330px) {
+
+    .nav {
+        margin: 1rem 0 ;
+    }
+
+    .nav__list {
+        gap: 12px;
+    }
+
+    .nav .btn_start {
+        font-size: 1rem;
+        padding: 1.1rem;
+    }
+}
+
+
+@media screen and (max-width: 720px) {
+    .nav__toggle {
+        display: inherit; /* скрыт по умолчанию */
+    }
 }
