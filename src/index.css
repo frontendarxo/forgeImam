@@ -46,3 +46,49 @@ a, a:visited, a:hover, a:active, a:focus {
 li {
   list-style: none;
 }
+
+
+.second-title {
+  font-family: 'Oxanium', sans-serif;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 3.5rem;
+}
+
+.paragraph {
+  color: #909090;
+  font-size: 1.5rem;
+}
+
+.subtext {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #1F1F1F;
+  border-radius: 1rem;
+  align-items: center;
+  color: #909090;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+@media screen and (max-width: 1330px) {
+
+
+  .paragraph {
+    padding: 0 16px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  .second-title {
+    font-size: 3rem;
+  }
+
+  .paragraph {
+    font-size: 1.4rem;
+  }
+
+
+}

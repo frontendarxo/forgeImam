@@ -1,0 +1,122 @@
+.about {
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about__text, .about__media {
+    max-width: 650px;
+}
+
+.about__progresses {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 30px;
+}
+
+.about__progress {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #1F1F1F;
+    width: 180px;
+    height: 150px;
+    justify-content: center;
+    border-radius: 1rem;
+    align-items: center;
+    color: #909090;
+    font-size: 1.4rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.about__progress strong {
+    color: #FF2332;
+    font-size: 3.1rem;
+    font-family: 'Anton', sans-serif;
+    font-weight: 800;
+}
+
+.about figcaption {
+    cursor: pointer;
+}
+.about figcaption img {
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.about figure {
+    color: #FFFFFF;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+
+
+.about__after {
+    animation: comeFromLeft 1s ease-out forwards;
+    will-change: transform;
+}
+
+.about__before {
+    animation: comeFromRight 1s ease-out forwards;
+    will-change: transform;
+}
+
+
+@keyframes comeFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes comeFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@media screen and (max-width: 1330px) {
+    .about {
+        flex-direction: column-reverse;
+        gap: 30px;
+        justify-content: center;
+        text-align: center;
+    }
+    .about__progresses {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .about {
+        gap: 20px;
+    }
+
+    .about figcaption img {
+        max-width: 90%;
+    }
+
+    .about__progress {
+        width: 80%;
+    }
+
+    .about__progresses {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+}

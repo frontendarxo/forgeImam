@@ -4,7 +4,6 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -57,7 +56,6 @@
 
 .animated-background {
     position: absolute;
-    z-index: 100;
     display: block;
     max-width: 45%;
     right: 0;
@@ -166,7 +164,7 @@
         bottom: 0;
         right: 0px;
         max-width: 57%;
-        z-index: 50;
+        z-index: 0;
     }
 
     .hero__title {

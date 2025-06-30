@@ -1,14 +1,15 @@
 import './main.css'
-import { AboutProgamm } from "../../components/about/about";
+import { AboutProgamm } from "../../components/program/program";
+import { AboutMe } from '../../components/aboutMe/aboutMe';
+import { ProductCards } from '../../components/product/productCards';
 
 
 export function Main() {
     return (
         <main className="main">
+            <AboutMe />
             <AboutProgamm />
-            <section className="service"></section>
-            <section className="clients"></section>
-            <section className="contacts"></section>
+            <ProductCards />
         </main>
     )
 }

@@ -1,29 +1,21 @@
-import { useState } from 'react';
-import { Button } from '../../components/button/startButton';
 import { Logo } from '../../components/logo/logo';
 
 export function Nav() {
 
-    const [menuOpen, setMenuOpen] = useState(false)
-
     return (
         <nav className="nav">
             <Logo />
-            <ul className={`nav__list ${menuOpen ? 'nav__list--open' : ''}`}>
+            <ul className='nav__list'>
                 <li className="nav__item">
-                    <a href="#about">Обо мне</a>
+                    <a href="#about-me">Обо мне</a>
                 </li>
                 <li className="nav__item">
-                    <a href="#Услуги">Услуги</a>
+                    <a href="#program">О продукте</a>
                 </li>
                 <li className="nav__item">
-                    <a href="#">Отзывы клиентов</a>
-                </li>
-                <li className="nav__item">
-                    <Button />
+                    <a href="#product">Тарифы</a>
                 </li>
             </ul>
-            {/* <button className="nav__toggle" onClick={() => setMenuOpen((prev) => !prev)}> ☰ </button> */}
         </nav>
     );
 }
